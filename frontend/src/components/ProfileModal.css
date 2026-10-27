@@ -1,0 +1,89 @@
+.pm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.pm-card {
+  background: #fff;
+  color: #0f172a;
+  width: 320px;
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  position: relative;
+}
+.pm-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: none;
+  background: #f1f5f9;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #64748b;
+  cursor: pointer;
+}
+.pm-card h2 {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+.pm-avatar-zone {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 14px;
+  cursor: pointer;
+}
+.pm-preview {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.pm-camera {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #fff;
+}
+.pm-name {
+  font-weight: 700;
+  font-size: 16px;
+}
+.pm-sub {
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+.pm-btn {
+  width: 100%;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.pm-btn-primary {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+}
+.pm-btn-primary:disabled {
+  background: #93c5fd;
+}

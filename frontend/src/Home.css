@@ -1,0 +1,385 @@
+/* Home.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #111b21;
+  overflow: hidden;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background: #111b21;
+}
+
+/* LEFT SIDEBAR */
+
+.sidebar {
+  width: 360px;
+  height: 100vh;
+  background: #202c33;
+  border-right: 1px solid #313d45;
+  display: flex;
+  flex-direction: column;
+}
+
+/* PROFILE */
+
+.profile-section {
+  height: 70px;
+  background: #202c33;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #313d45;
+}
+
+.profile-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #00a884;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.profile-name {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.profile-icons {
+  display: flex;
+  gap: 18px;
+  color: #aebac1;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* SEARCH */
+
+.search-container {
+  padding: 10px;
+  background: #111b21;
+}
+
+.search-box {
+  background: #202c33;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  margin-left: 10px;
+}
+
+.search-box input::placeholder {
+  color: #8696a0;
+}
+
+/* CONTACTS */
+
+.contacts {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.contacts::-webkit-scrollbar {
+  width: 6px;
+}
+
+.contacts::-webkit-scrollbar-thumb {
+  background: #374248;
+  border-radius: 20px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  cursor: pointer;
+  transition: .2s;
+  border-bottom: 1px solid #2a3942;
+}
+
+.contact-card:hover {
+  background: #2a3942;
+}
+
+.contact-card.active {
+  background: #2a3942;
+}
+
+.contact-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #00a884;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.contact-info {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.contact-name {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.last-message {
+  color: #8696a0;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.contact-time {
+  color: #8696a0;
+  font-size: 12px;
+}
+
+/* RIGHT CHAT */
+
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #0b141a;
+}
+
+/* HEADER */
+
+.chat-header {
+  height: 70px;
+  background: #202c33;
+  border-left: 1px solid #313d45;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.chat-user {
+  display: flex;
+  align-items: center;
+}
+
+.chat-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #00a884;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.chat-details {
+  margin-left: 15px;
+}
+
+.chat-details h3 {
+  color: white;
+  font-size: 16px;
+}
+
+.chat-details p {
+  color: #8696a0;
+  font-size: 13px;
+}
+
+/* MESSAGES */
+
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  padding: 25px;
+  background: url("https://www.transparenttextures.com/patterns/cartographer.png");
+}
+
+.chat-window::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+  background: #374248;
+}
+
+.message {
+  max-width: 65%;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  position: relative;
+  word-break: break-word;
+}
+
+.sent {
+  margin-left: auto;
+  background: #005c4b;
+  color: white;
+}
+
+.received {
+  background: #202c33;
+  color: white;
+}
+
+.message-time {
+  font-size: 11px;
+  color: #c7d1d6;
+  text-align: right;
+  margin-top: 6px;
+}
+
+/* INPUT */
+
+.message-input {
+  height: 70px;
+  background: #202c33;
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  gap: 15px;
+}
+
+.message-input input {
+  flex: 1;
+  background: #2a3942;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  padding: 14px 20px;
+  font-size: 15px;
+}
+
+.message-input input::placeholder {
+  color: #8696a0;
+}
+
+.message-input button {
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  background: #00a884;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.message-input button:hover {
+  background: #06cf9c;
+}
+
+/* EMPTY CHAT */
+
+.empty-chat {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8696a0;
+  font-size: 22px;
+}
+
+/* ===== MOBILE LAYOUT ===== */
+/* Below this width the sidebar (contact list) and the chat window
+   can't both fit on screen at a usable size, so only one is shown
+   at a time. .mobile-chat-open (added to .home once a contact is
+   selected) switches which one is visible; the back button in the
+   chat header switches it off again. */
+@media (max-width: 768px) {
+
+  .home {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .home .sidebar {
+    width: 100vw;
+    border-right: none;
+  }
+
+  .chat {
+    display: none;
+    width: 100vw;
+  }
+
+  .home.mobile-chat-open .sidebar {
+    display: none;
+  }
+
+  .home.mobile-chat-open .chat {
+    display: flex;
+  }
+
+  .chat-header {
+    border-left: none;
+  }
+
+  .message {
+    max-width: 82%;
+    font-size: 14px;
+  }
+
+  .message-input {
+    height: 62px;
+    padding: 8px 12px;
+    gap: 10px;
+  }
+
+  .message-input input {
+    padding: 11px 16px;
+    font-size: 14px;
+  }
+
+  .message-input button {
+    width: 46px;
+    height: 46px;
+    font-size: 17px;
+  }
+
+  .chat-window {
+    padding: 14px;
+  }
+}

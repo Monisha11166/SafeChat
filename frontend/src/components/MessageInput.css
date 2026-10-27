@@ -1,0 +1,139 @@
+.message-input-wrapper{
+    position:relative;
+    background:#202c33;
+}
+
+.message-input-container{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 15px;
+    border-top:1px solid #313d45;
+}
+
+.input-btn{
+    width:42px;
+    height:42px;
+    border:none;
+    background:transparent;
+    border-radius:50%;
+    color:#aebac1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+    font-size:18px;
+}
+
+.input-btn:hover{
+    background:#2a3942;
+    color:#fff;
+}
+
+.message-input{
+    flex:1;
+    height:48px;
+    border:none;
+    outline:none;
+    border-radius:24px;
+    background:#2a3942;
+    color:white;
+    padding:0 18px;
+    font-size:15px;
+}
+
+.message-input::placeholder{
+    color:#8696a0;
+}
+
+.send-button{
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:#00a884;
+    color:white;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+    transition:.3s;
+}
+
+.send-button:hover{
+    background:#06cf9c;
+    transform:scale(1.05);
+}
+
+.emoji-box{
+    position:absolute;
+    bottom:75px;
+    left:10px;
+    z-index:1000;
+}
+
+.preview-box{
+    position:absolute;
+    bottom:78px;
+    left:20px;
+    background:#202c33;
+    padding:10px;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,.4);
+}
+
+.preview-box img{
+    width:180px;
+    max-width:220px;
+    border-radius:10px;
+    display:block;
+}
+
+.remove-preview{
+    margin-top:10px;
+    width:100%;
+    height:36px;
+    border:none;
+    border-radius:8px;
+    background:#ef4444;
+    color:white;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.message-input-container{
+padding:10px;
+}
+
+.input-btn{
+width:38px;
+height:38px;
+}
+
+.send-button{
+width:42px;
+height:42px;
+}
+
+.message-input{
+height:44px;
+}
+
+.preview-box img{
+width:140px;
+}
+
+}
+.preview-file-chip {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
