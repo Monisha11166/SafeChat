@@ -10,6 +10,11 @@ const { initializeSocket } = require("./socket");
 dotenv.config();
 
 const app = express();
+
+// Render (and most hosts) put a proxy in front of the app. Without this,
+// every user appears to come from the proxy's IP, so the rate limiter
+// would count everyone together and could block real users.
+app.set("trust proxy", 1);
 const server = http.createServer(app);
 
 // Initialize Socket.IO
