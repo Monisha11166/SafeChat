@@ -1,0 +1,53 @@
+.risk-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.risk-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.risk-low {
+  background: #e6f4ea;
+  color: #1e7e34;
+}
+.risk-low .risk-dot {
+  background: #1e7e34;
+}
+
+.risk-medium {
+  background: #fff4e0;
+  color: #b26a00;
+}
+.risk-medium .risk-dot {
+  background: #f2a900;
+}
+
+.risk-high {
+  background: #fde8e8;
+  color: #c0392b;
+  animation: pulse 1.5s infinite;
+}
+.risk-high .risk-dot {
+  background: #e74c3c;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(231, 76, 60, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+  }
+}

@@ -1,0 +1,119 @@
+.chat-header{
+    height:70px;
+    background:#202c33;
+    border-left:1px solid #313d45;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+}
+
+.chat-user{
+    display:flex;
+    align-items:center;
+}
+
+.chat-avatar{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#00a884;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.chat-details{
+    margin-left:15px;
+}
+
+.chat-details h3{
+    margin:0;
+    color:white;
+    font-size:17px;
+    font-weight:600;
+}
+
+.chat-details p{
+    margin-top:5px;
+    color:#aebac1;
+    font-size:13px;
+}
+
+.chat-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.icon-btn{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:transparent;
+    color:#aebac1;
+    cursor:pointer;
+    transition:.3s;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.icon-btn:hover{
+    background:#2a3942;
+    color:white;
+}
+
+.icon-btn svg{
+    font-size:17px;
+}
+
+/* Only needed on mobile, where the contact list and chat can't both
+   fit on screen; desktop shows them side by side so there's nothing
+   to "go back" to. */
+.back-btn{
+    display:none;
+    margin-right:6px;
+    flex-shrink:0;
+}
+
+@media(max-width:768px){
+
+.chat-header{
+padding:0 12px;
+}
+
+.chat-avatar{
+width:42px;
+height:42px;
+font-size:18px;
+}
+
+.chat-details h3{
+font-size:15px;
+}
+
+.chat-details p{
+font-size:12px;
+}
+
+.chat-actions{
+gap:5px;
+}
+
+.icon-btn{
+width:36px;
+height:36px;
+}
+
+.back-btn{
+display:flex;
+width:34px;
+height:34px;
+}
+
+}
