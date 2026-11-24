@@ -392,7 +392,9 @@ async function linkContacts(userId, contactId) {
         (sc.triggerMessage ? `\n             trigger message: "${sc.triggerMessage}"` : "")
     );
 
-    await maybeAlertGuardians(riskDoc);
+    // Alert ONLY the main account's guardian (your real parent number/email).
+    // The fake demo contacts' parents are never messaged.
+    await maybeAlertGuardians(riskDoc, { onlyUserId: main._id });
   }
 
   console.log("\nDone. Log in and open the Safety Dashboard.");

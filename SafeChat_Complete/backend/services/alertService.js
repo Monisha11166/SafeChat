@@ -217,7 +217,10 @@ async function sendGuardianAlert({
  *  - ... or re-alert at the same level after RISK_ALERT_COOLDOWN_HOURS (24h)
  *  - if the level drops, the marker resets so a future rise alerts again
  */
-async function maybeAlertGuardians(riskDoc) {
+async function maybeAlertGuardians(riskDoc, opts = {}) {
+  // opts.onlyUserId: alert only THIS user's guardian (used by the demo seed
+  // script so fake demo parents never get real SMS/emails).
+  const only = opts.onlyUserId ? String(opts.onlyUserId) : null;
   const level = riskDoc.level;
   const prevLevel = riskDoc.lastAlertLevel || "Low";
   const prevAt = riskDoc.lastAlertAt || null;
@@ -259,7 +262,7 @@ async function maybeAlertGuardians(riskDoc) {
   const context = await getRecentContext(riskDoc.userA, riskDoc.userB);
 
   const jobs = [];
-  if (a && (a.guardianEmail || a.guardianPhone)) {
+  if (a && (!only || String(a._id) === only) && (a.guardianEmail || a.guardianPhone)) {
     jobs.push(
       sendGuardianAlert({
         child: a,
@@ -272,7 +275,7 @@ async function maybeAlertGuardians(riskDoc) {
       })
     );
   }
-  if (b && (b.guardianEmail || b.guardianPhone)) {
+  if (b && (!only || String(b._id) === only) && (b.guardianEmail || b.guardianPhone)) {
     jobs.push(
       sendGuardianAlert({
         child: b,
