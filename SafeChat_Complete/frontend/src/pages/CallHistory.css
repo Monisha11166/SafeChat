@@ -1,0 +1,134 @@
+.calls-page {
+  min-height: 100vh;
+  background: #111b21;
+  color: white;
+  padding: 25px;
+}
+
+.calls-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.calls-header .back-btn {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: #202c33;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calls-header .back-btn:hover {
+  background: #2a3942;
+}
+
+.empty-text {
+  text-align: center;
+  color: #aebac1;
+  margin-top: 70px;
+}
+
+.call-card {
+  background: #202c33;
+  border-radius: 14px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+  transition: 0.3s;
+}
+
+.call-card:hover {
+  background: #2a3942;
+}
+
+.call-avatar-sm {
+  flex-shrink: 0;
+}
+
+.call-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.call-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.call-name {
+  font-weight: 600;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.call-type-icon {
+  font-size: 12px;
+  color: #8696a0;
+  flex-shrink: 0;
+}
+
+.call-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.call-status--completed {
+  color: #8696a0;
+}
+
+.call-status--missed {
+  color: #ef4444;
+}
+
+.direction-icon {
+  font-size: 11px;
+}
+
+.direction-icon.outgoing {
+  color: #00a884;
+}
+
+.direction-icon.incoming {
+  color: #53bdeb;
+}
+
+.direction-icon.missed {
+  color: #ef4444;
+}
+
+.call-time {
+  color: #8696a0;
+  font-size: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .calls-page {
+    padding: 16px;
+  }
+
+  .call-card {
+    padding: 12px 14px;
+  }
+
+  .call-time {
+    font-size: 11px;
+  }
+}
